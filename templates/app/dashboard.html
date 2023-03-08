@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<!-- {% load socialaccount %} -->
+{% block title %}
+	Dashboard
+{% endblock %}
+
+{% block content %}
+
+	{% if messages %}
+
+	    {% for message in messages %}
+
+		<!--Panel-->
+		<div class="card border-success mb-3">
+		    <div class="card-header text-danger">
+		        <p class="card-title">{{ message }}</p>
+		    </div>
+		</div>
+		<!--/.Panel-->
+	    
+	    {% endfor %}
+
+	{% endif %}
+	<div style="color: aliceblue;">
+	<h1 class="mt-5 text-center">Welcome {{ request.user.name }}</h1>
+	<p class="text-left mt-5">Bio: {{ user }}</p>
+	<p class="text-left">Joined: {{ user.profile.timestamp }}</p>
+	<p class="text-left">Email: {{ user.email }}</p>
+</div>
+{% endblock content %}
