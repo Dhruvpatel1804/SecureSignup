@@ -10,7 +10,7 @@
 * Installation and Setup
 
 1. Clone the repository:
-  git clone https://github.com/your-username/django-signup-form.git
+  git clone https://github.com/Dhruvpatel1804/signup_form.git
 
 2. Create and activate a virtual environment:
   python3 -m venv env
